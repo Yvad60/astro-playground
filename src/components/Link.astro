@@ -2,12 +2,6 @@
 const { href } = Astro.props;
 ---
 
-<a href={href}>
+<a href={href} class="text-sky-500">
   <slot />
 </a>
-
-<style>
-  a {
-    color: red;
-  }
-</style>
