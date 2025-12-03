@@ -5,3 +5,12 @@ const { href } = Astro.props;
 <a href={href} class="text-sky-500">
   <slot />
 </a>
+
+<script>
+  const headingOnes = document.querySelectorAll("h1");
+  headingOnes.forEach((headingOne) => {
+    headingOne.addEventListener("click", () => {
+      console.log("clicked");
+    });
+  });
+</script>
