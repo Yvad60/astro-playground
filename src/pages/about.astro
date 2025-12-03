@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>About page</h1>
-</body>
-</html>
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="About">
+  <h1 slot="content">About</h1>
+  <div slot="sidebar">
+    <p>This is the about page sidebar</p>
+  </div>
+</BaseLayout>
