@@ -1,10 +1,32 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from "../components/ArticleCard.astro";
+import "../styles/global.css";
+
+const articleData = [
+  {
+    tag: "Technology",
+    title: "Why is the Tesla cybertruck designed the way it is?",
+    description: "An interview with the Tesla Cybertruck team",
+    author: "Carrier brew",
+    date: "Two days ago",
+  },
+  {
+    tag: "Popular",
+    title: "How to keep going when you're feeling lost",
+    description: "The future can be scary, but there are ways to deal with that fear",
+    author: "Jerome Koech",
+    date: "Two days ago",
+  },
+  {
+    tag: "Design",
+    title: "Game rules of thumb to follow while playing video games",
+    description: "The future can be scary, but there are ways to deal with that fear",
+    author: "Lionel Messi",
+    date: "Yesterday",
+  },
+];
 ---
 
-<BaseLayout title="Home">
-  <h1 slot="content">Home</h1>
-  <div slot="sidebar">
-    <p>This is the home page sidebar</p>
-  </div>
-</BaseLayout>
+<main class="min-h-screen bg-slate-100 h-full w-full flex justify-center gap-10 items-center">
+  {articleData.map((article) => <ArticleCard {...article} />)}
+</main>
